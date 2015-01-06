@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{C72DED81-BFEA-83EF-DB30-8D715A2348F8}") = "practice2", "Assembly-CSharp.csproj", "{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}"
+Project("{475A61B9-9C16-4CA5-793B-54DB6E07FD36}") = "so much swag it hurts", "Assembly-CSharp.csproj", "{0C2370CB-CBA6-A745-EC49-D54A0612EAA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C2370CB-CBA6-A745-EC49-D54A0612EAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C2370CB-CBA6-A745-EC49-D54A0612EAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C2370CB-CBA6-A745-EC49-D54A0612EAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C2370CB-CBA6-A745-EC49-D54A0612EAA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																													GlobalSection(MonoDevelopProperties) = preSolution
+	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -35,5 +35,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal

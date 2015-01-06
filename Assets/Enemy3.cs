@@ -16,6 +16,12 @@ public class Enemy3 : MonoBehaviour {
 	public Transform target;
 	// this determines how far from the original the clone will appear
 	Vector3 displacement = new Vector3 (0, 0, 0);
+	// damage determines how powerful this enemy is
+	public float damage = 15;
+	public Player player;
+	public float health = 400;
+
+	public string tag = "enemy";
 	
 
 	public float enemySpeed;
@@ -23,11 +29,11 @@ public class Enemy3 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		player = (Player) FindObjectOfType (typeof(Player));
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		enemySpeed = maxSpeed  * Time.deltaTime;
 		//deltaTime in the next line ensures movement per second, not per frame because that would be SUPER fast
 		
@@ -47,7 +53,35 @@ public class Enemy3 : MonoBehaviour {
 			
 			timeTillSplit = 5f;
 		}
+
+		if (health <= 0) {
+			Destroy(gameObject);
+		}
+		// If the enemy collides with the player, player health reduces
+		if (Vector3.Distance(transform.position, target.transform.position) < 10) {
+			player.takeDamage(damage);
+
+			
+		}
 	}
+
+	public void reduceHealth(int num){
+		health -= num;
+	}
+
+	public void OnTriggerEnter2D(Collider2D coll){
+		Debug.Log ("Welp");
+		GunBullet bullet = coll.gameObject.GetComponent<GunBullet>();
+		if (bullet != null) {
+			Debug.Log("Duk!");
+			reduceHealth (50);
+		}
+		
+	}
+
+
+
+
 }
 
 

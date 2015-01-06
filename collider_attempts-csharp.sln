@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{C72DED81-BFEA-83EF-DB30-8D715A2348F8}") = "practice2", "Assembly-CSharp.csproj", "{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}"
+Project("{8289340A-05A7-2B97-717C-5B087F0D6A16}") = "collider_attempts", "Assembly-CSharp-vs.csproj", "{394352DC-D21F-7C63-E0CD-D9AF65CC81A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FEEC700-E0CE-BD50-CC0E-EB18E07CBF19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{394352DC-D21F-7C63-E0CD-D9AF65CC81A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{394352DC-D21F-7C63-E0CD-D9AF65CC81A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{394352DC-D21F-7C63-E0CD-D9AF65CC81A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{394352DC-D21F-7C63-E0CD-D9AF65CC81A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																													GlobalSection(MonoDevelopProperties) = preSolution
+																		GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
