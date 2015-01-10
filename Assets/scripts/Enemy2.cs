@@ -58,6 +58,7 @@ public class Enemy2 : MonoBehaviour {
 
 		if (health <= 0) {
 			Destroy(gameObject);
+			player.enemy_count -= 1;
 		}
 
 	}

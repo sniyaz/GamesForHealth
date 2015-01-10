@@ -28,7 +28,8 @@ public class Enemy : MonoBehaviour {
 		transform.position = Vector2.MoveTowards(transform.position, target.transform.position, enemySpeed); 
 		if (health <= 0) {
 			Debug.Log("Dead!");
-			Destroy(gameObject);		
+			Destroy(gameObject);
+			player.enemy_count -= 1;
 		} 
 		// If the enemy collides with the player, player health reduces
 		if (Vector3.Distance(transform.position, target.transform.position) < 10) {

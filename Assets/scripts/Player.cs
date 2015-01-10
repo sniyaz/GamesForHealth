@@ -16,6 +16,9 @@ public class Player : MonoBehaviour {
 	public GameObject gunBullet;
 	// refractory is the period after the player is hit. During this time, he is temporarily invincible
 	public float refractory = 7f;
+
+	//use to tell when the player has won...
+	public int enemy_count;
 	
 	// Use this for initialization
 	void Start () {
@@ -43,6 +46,14 @@ public class Player : MonoBehaviour {
 			Destroy(gameObject);
 			Application.Quit();
 		}
+
+		if (enemy_count == 0) {
+			Debug.Log("Winner!");
+			UnityEditor.EditorApplication.isPlaying = false;
+			Application.Quit();
+
+		}
+
 		refractory -= Time.deltaTime;
 
 

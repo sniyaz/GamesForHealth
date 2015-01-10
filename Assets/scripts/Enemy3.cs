@@ -9,6 +9,7 @@ public class Enemy3 : MonoBehaviour {
 	int splitLimit = 16;
 	// brethren tells how many total clones there are, including itself
 	int brethren = 1;
+	public Player player;
 	public GameObject splitter = null;
 	// maxSpeed determines how fast this guy can go
 	public float maxSpeed = 15f;
@@ -18,7 +19,7 @@ public class Enemy3 : MonoBehaviour {
 	Vector3 displacement = new Vector3 (0, 0, 0);
 	// damage determines how powerful this enemy is
 	public float damage = 15;
-	public Player player;
+
 	public float health = 400;
 
 	public string tag = "enemy";
@@ -29,11 +30,11 @@ public class Enemy3 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = (Player) FindObjectOfType (typeof(Player));
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
 		enemySpeed = maxSpeed  * Time.deltaTime;
 		//deltaTime in the next line ensures movement per second, not per frame because that would be SUPER fast
 		
@@ -52,17 +53,15 @@ public class Enemy3 : MonoBehaviour {
 			clone.splitLimit = splitLimit;
 			
 			timeTillSplit = 5f;
+
+			player.enemy_count += 1;
 		}
 
 		if (health <= 0) {
 			Destroy(gameObject);
+			player.enemy_count -= 1;
 		}
-		// If the enemy collides with the player, player health reduces
-		if (Vector3.Distance(transform.position, target.transform.position) < 10) {
-			player.takeDamage(damage);
 
-			
-		}
 	}
 
 	public void reduceHealth(int num){
